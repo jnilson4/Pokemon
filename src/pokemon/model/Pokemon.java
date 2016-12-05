@@ -6,6 +6,7 @@ public abstract class Pokemon
 	private int attackPoints;
 	private double speed;
 	private int number;
+
 	private String name;
 	
 	public Pokemon(String name, int number)
@@ -88,4 +89,13 @@ public abstract class Pokemon
 		this.number = number;
 	}
 
+	public String getName()
+	{
+		return name;
+	}
+
+	public void setName(String name)
+	{
+		this.name = name;
+	}
 }

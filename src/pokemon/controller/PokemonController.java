@@ -1,18 +1,57 @@
 package pokemon.controller;
 
+import java.util.ArrayList;
+
+import pokemon.model.Pokemon;
 import pokemon.view.PokemonFrame;
 
 public class PokemonController
 {
-	private PokemonFrame pokeFrame;
+	private ArrayList<Pokemon> pokedex;
+	private PokemonFrame baseFrame;
 	
 	public PokemonController()
 	{
-		this.pokeFrame = new PokemonFrame(this);
+		pokedex = new ArrayList<Pokemon>();
+		buildPokedex();
+		
+		baseFrame = new PokemonFrame(this);
 	}
 	
 	public void start()
 	{
 		
 	}
+	
+	private void buildPokedex()
+	{
+		
+	}
+	
+	public String[] buildPokedexText()
+	{
+		String [] pokemonNames = new String[pokedex.size()];
+		
+		for(int index = 0; index < pokedex.size(); index++)
+		{
+			pokemonNames[index] = pokedex.get(index).getName();
+		}
+		
+		return pokemonNames;
+	}
+
+//	public void updateSelected(int index, String name, int combat, int health, double speed)
+//	{
+//		
+//	}
+//
+//	public ArrayList<Pokemon> getPokedex()
+//	{
+//		
+//	}
+//	
+//	public PokemonFrame getBaseFrame()
+//	{
+//		
+//	}
 }
