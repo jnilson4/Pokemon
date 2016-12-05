@@ -5,9 +5,9 @@
     <id>UMLClass</id>
     <coordinates>
       <x>590</x>
-      <y>50</y>
+      <y>40</y>
       <w>230</w>
-      <h>140</h>
+      <h>150</h>
     </coordinates>
     <panel_attributes>/Pokemon/
 --
@@ -16,6 +16,7 @@
 - speed : double
 - name : String
 - isAlive : boolean
+- number : int
 --
 + get/set
 bg=green
