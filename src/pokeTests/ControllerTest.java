@@ -1,4 +1,4 @@
-package poke.tests;
+package pokeTests;
 
 import java.util.ArrayList;
 import java.util.List;
