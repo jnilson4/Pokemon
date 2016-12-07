@@ -4,7 +4,7 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>590</x>
+      <x>600</x>
       <y>40</y>
       <w>230</w>
       <h>150</h>
@@ -26,7 +26,7 @@ bg=green
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>50</x>
+      <x>60</x>
       <y>280</y>
       <w>230</w>
       <h>140</h>
@@ -42,7 +42,7 @@ bg=red</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>180</x>
+      <x>190</x>
       <y>520</y>
       <w>230</w>
       <h>140</h>
@@ -51,15 +51,15 @@ bg=red</panel_attributes>
 --
 
 --
-+ spitFire
-+ throwFire
++ toast
++ fieryDance
 bg=blue</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>160</x>
+      <x>170</x>
       <y>110</y>
       <w>450</w>
       <h>190</h>
@@ -70,7 +70,7 @@ bg=blue</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>150</x>
+      <x>160</x>
       <y>410</y>
       <w>50</w>
       <h>130</h>
@@ -81,7 +81,7 @@ bg=blue</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>320</x>
+      <x>330</x>
       <y>280</y>
       <w>230</w>
       <h>140</h>
@@ -97,7 +97,7 @@ bg=red</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>590</x>
+      <x>600</x>
       <y>280</y>
       <w>230</w>
       <h>140</h>
@@ -113,7 +113,7 @@ bg=red</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>860</x>
+      <x>870</x>
       <y>280</y>
       <w>230</w>
       <h>140</h>
@@ -129,7 +129,7 @@ bg=red</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1130</x>
+      <x>1140</x>
       <y>280</y>
       <w>230</w>
       <h>140</h>
@@ -145,7 +145,7 @@ bg=red</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>460</x>
+      <x>470</x>
       <y>520</y>
       <w>230</w>
       <h>140</h>
@@ -154,15 +154,15 @@ bg=red</panel_attributes>
 --
 
 --
-+ inAir
-+ onGround
++ fly
++ hurricane
 bg=blue</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1010</x>
+      <x>1020</x>
       <y>520</y>
       <w>230</w>
       <h>140</h>
@@ -171,15 +171,15 @@ bg=blue</panel_attributes>
 --
 
 --
-+ sitDown
-+ standUp
++ attract
++ celebrate
 bg=blue</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>400</x>
+      <x>410</x>
       <y>410</y>
       <w>590</w>
       <h>130</h>
@@ -190,7 +190,7 @@ bg=blue</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>680</x>
+      <x>690</x>
       <y>410</y>
       <w>310</w>
       <h>130</h>
@@ -201,7 +201,7 @@ bg=blue</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>430</x>
+      <x>440</x>
       <y>410</y>
       <w>330</w>
       <h>130</h>
@@ -212,7 +212,7 @@ bg=blue</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>740</x>
+      <x>750</x>
       <y>520</y>
       <w>230</w>
       <h>140</h>
@@ -221,15 +221,15 @@ bg=blue</panel_attributes>
 --
 
 --
-+ shockOpponent
-+ buildCharge
++ staticZap
++ thunder
 bg=blue</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1120</x>
+      <x>1130</x>
       <y>410</y>
       <w>150</w>
       <h>130</h>
@@ -240,7 +240,7 @@ bg=blue</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>690</x>
+      <x>700</x>
       <y>410</y>
       <w>460</w>
       <h>130</h>
@@ -251,7 +251,7 @@ bg=blue</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>810</x>
+      <x>820</x>
       <y>110</y>
       <w>450</w>
       <h>190</h>
@@ -262,7 +262,7 @@ bg=blue</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>430</x>
+      <x>440</x>
       <y>180</y>
       <w>180</w>
       <h>120</h>
@@ -273,7 +273,7 @@ bg=blue</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>690</x>
+      <x>700</x>
       <y>180</y>
       <w>30</w>
       <h>120</h>
@@ -284,7 +284,7 @@ bg=blue</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>810</x>
+      <x>820</x>
       <y>180</y>
       <w>180</w>
       <h>120</h>
