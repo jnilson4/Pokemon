@@ -1,7 +1,7 @@
 package pokemon.model;
 
-public class Normal
+public interface Normal
 {
-	public int attract;
-	public int celebrate;
+	public int attract();
+	public int celebrate();
 }

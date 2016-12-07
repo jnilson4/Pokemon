@@ -1,7 +1,7 @@
 package pokemon.model;
 
-public class Fire
+public interface Fire
 {	
-	public int toast;
-	public int fieryDance;
+	public int toast();
+	public int fieryDance();
 }
