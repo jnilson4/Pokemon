@@ -30,7 +30,6 @@ public class PokemonPanel extends JPanel
 	
 	public PokemonPanel(PokemonController baseController)
 	{
-		super();
 		this.baseController = baseController;
 		this.baseLayout = new SpringLayout();
 		this.pokemonIcon = new ImageIcon(getClass().getResource("/pokemon/view/images/pokeball.png"));
