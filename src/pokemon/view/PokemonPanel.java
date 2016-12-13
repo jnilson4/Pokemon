@@ -87,6 +87,9 @@ public class PokemonPanel extends JPanel
 	
 	private void setupLayout()
 	{
+		baseLayout.putConstraint(SpringLayout.WEST, nameField, 3, SpringLayout.EAST, nameLabel);
+		baseLayout.putConstraint(SpringLayout.NORTH, speedField, -5, SpringLayout.NORTH, speedLabel);
+		baseLayout.putConstraint(SpringLayout.WEST, speedField, 6, SpringLayout.EAST, speedLabel);
 		baseLayout.putConstraint(SpringLayout.NORTH, pokemonLabel, -393, SpringLayout.SOUTH, this);
 		baseLayout.putConstraint(SpringLayout.WEST, pokemonLabel, 42, SpringLayout.WEST, this);
 		baseLayout.putConstraint(SpringLayout.SOUTH, pokemonLabel, -38, SpringLayout.SOUTH, this);
@@ -99,7 +102,6 @@ public class PokemonPanel extends JPanel
 		baseLayout.putConstraint(SpringLayout.WEST, numberField, 6, SpringLayout.EAST, numberLabel);
 		baseLayout.putConstraint(SpringLayout.NORTH, numberLabel, 69, SpringLayout.NORTH, this);
 		baseLayout.putConstraint(SpringLayout.NORTH, speedLabel, 21, SpringLayout.SOUTH, combatLabel);
-		baseLayout.putConstraint(SpringLayout.WEST, speedField, 6, SpringLayout.EAST, speedLabel);
 		baseLayout.putConstraint(SpringLayout.WEST, speedLabel, 0, SpringLayout.WEST, healthLabel);
 		baseLayout.putConstraint(SpringLayout.WEST, advancedArea, 0, SpringLayout.WEST, healthLabel);
 		baseLayout.putConstraint(SpringLayout.WEST, advancedLabel, 0, SpringLayout.WEST, healthLabel);
@@ -117,8 +119,6 @@ public class PokemonPanel extends JPanel
 		baseLayout.putConstraint(SpringLayout.NORTH, updateButton, 20, SpringLayout.SOUTH, advancedArea);
 		baseLayout.putConstraint(SpringLayout.SOUTH, advancedArea, -103, SpringLayout.SOUTH, this);
 		baseLayout.putConstraint(SpringLayout.SOUTH, numberField, -6, SpringLayout.NORTH, healthField);
-		baseLayout.putConstraint(SpringLayout.WEST, nameField, 0, SpringLayout.WEST, speedField);
-		baseLayout.putConstraint(SpringLayout.NORTH, speedField, 6, SpringLayout.SOUTH, combatField);
 		baseLayout.putConstraint(SpringLayout.SOUTH, updateButton, -54, SpringLayout.SOUTH, this);
 		baseLayout.putConstraint(SpringLayout.EAST, updateButton, -179, SpringLayout.EAST, this);
 	}
@@ -279,12 +279,12 @@ public class PokemonPanel extends JPanel
 
 	private boolean isValidName(String input)
 	{
-		boolean isValid = false;
+		boolean isValid = true;
 		
-		if(nameField.getText().length() != 2)
+		if(nameField.getText().length() <= 2)
 		{
 			JOptionPane.showMessageDialog(this, "The name is not long enough!");
-			isValid = true;
+			isValid = false;
 		}
 		
 		return isValid;
