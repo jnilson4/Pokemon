@@ -39,7 +39,7 @@ public class PokemonPanel extends JPanel
 		this.speedField = new JTextField(5);
 		this.numberField = new JTextField(5);
 		this.advancedArea = new JTextArea(10, 25);
-		this.pokemonSelector = new JComboBox(new String [] {"Charmander", "Pickachu", "Eevee", "Charizard", "Snorlax"});
+		this.pokemonSelector = new JComboBox(baseController.buildPokedexText());
 		this.advancedLabel = new JLabel("Advanced Info");
 		this.combatLabel = new JLabel("Combat Points: ");
 		this.healthLabel = new JLabel("Health Points: ");
@@ -136,8 +136,8 @@ public class PokemonPanel extends JPanel
 				speedField.setText(baseController.getPokedex().get(selected).getSpeed() + "");
 				healthField.setText(baseController.getPokedex().get(selected).getHealthPoints() + "");
 				advancedArea.setText(baseController.getPokedex().get(selected).getPokemonInformation() + "\n\n" + baseController.getPokedex().get(selected).getPokemonTypes());
-//				changeColorBasedOnData(baseController.getPokedex().get(selected).getPokemonTypes());
-//				changeImageDisplay(baseController.getPokedex().get(selected).getClass().getSimpleName());
+				changeColorBasedOnData(baseController.getPokedex().get(selected).getPokemonTypes());
+				changeImageDisplay(baseController.getPokedex().get(selected).getClass().getSimpleName());
 			}
 		});
 		
@@ -145,11 +145,11 @@ public class PokemonPanel extends JPanel
 		{
 			public void actionPerformed(ActionEvent selection)
 			{
-//				if(isValidName(nameField.getText()) && isValidInteger(combatField.getText()) && isValidInteger(healthField.getText()) && isValidDouble(speedField.getText()))
-//				{
-//					int selected = pokedexSelector.getSelectedIndex();
-//					baseController.updateSelected(selected, nameField.getText(), Integer.parseInt(combatField.getText()), Integer.parseInt(healthField.getText()), Double.parseDouble(speedField.getText()));
-//				}
+				if(isValidName(nameField.getText()) && isValidInteger(combatField.getText()) && isValidInteger(healthField.getText()) && isValidDouble(speedField.getText()))
+				{
+					int selected = pokemonSelector.getSelectedIndex();
+					baseController.updateSelected(selected, nameField.getText(), Integer.parseInt(combatField.getText()), Integer.parseInt(healthField.getText()), Double.parseDouble(speedField.getText()));
+				}
 			}
 		});
 		
@@ -195,6 +195,99 @@ public class PokemonPanel extends JPanel
 					//}
 				}
 			});
+	}
+	
+	private void changeColorBasedOnData(String data)
+	{
+		if(data.contains("Electric"))
+		{
+			this.setBackground(Color.YELLOW);
+		}
+		else if(data.contains("Fly"))
+		{
+			this.setBackground(Color.CYAN);
+		}
+		else if(data.contains("Fire"))
+		{
+			this.setBackground(Color.RED);
+		}
+		else if(data.contains("Normal"))
+		{
+			this.setBackground(Color.DARK_GRAY);
+		}
+		else
+		{
+			setRandomColor();
+		}
+		
+		repaint();
+	}
+	
+	private void changeImageDisplay(String name)
+	{
+		String path= "/pokemon/view/images/";
+		String defaultName = "pokeball";
+		String extension = ".png";
+		try
+		{
+			pokemonIcon = new ImageIcon(getClass().getResource(path + name + extension));
+		}
+		catch (NullPointerException missingFile)
+		{
+			pokemonIcon = new ImageIcon(getClass().getResource(path + defaultName + extension));
+		}
+		pokemonLabel.setIcon(pokemonIcon);
+		repaint();
+	}
+	
+	private boolean isValidDouble(String input)
+	{
+		boolean isValid = false;
+		
+		try
+		{
+			double successful = Double.parseDouble(input);
+			isValid = true;
+		}
+		catch(NumberFormatException userTypedSomething)
+		{
+			JOptionPane.showMessageDialog(this, "Type in a valid double for speed!");
+			speedField.setText("");
+		}
+		
+		return isValid;
+	}
+	
+	private boolean isValidInteger(String input)
+	{
+		boolean isValid = false;
+		
+		try
+		{
+			int successful = Integer.parseInt(input);
+			isValid = true;
+		}
+		catch(NumberFormatException userTypedSomething)
+		{
+			JOptionPane.showMessageDialog(this, "Type in a valid integer!");
+			combatField.setText("");
+			healthField.setText("");
+		}
+		
+		return isValid;
+	}
+
+	private boolean isValidName(String input)
+	{
+		boolean isValid = false;
+		
+		if(nameField.getText().length() != 2)
+		{
+			JOptionPane.showMessageDialog(this, "The name is not long enough!");
+			isValid = true;
+		}
+		
+		return isValid;
 	}
 	
 	private void setRandomColor()

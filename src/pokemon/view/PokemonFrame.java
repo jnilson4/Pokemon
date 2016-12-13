@@ -21,7 +21,7 @@ public class PokemonFrame extends JFrame
 	private void setupFrame()
 	{
 		this.setContentPane(appPanel);
-		this.setTitle("POKEMON");
+		this.setTitle("Pokemon");
 		this.setSize(new Dimension(900, 600));
 		this.setVisible(true);
 	}

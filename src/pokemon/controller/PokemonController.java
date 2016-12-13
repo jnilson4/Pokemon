@@ -25,11 +25,12 @@ public class PokemonController
 	
 	private void buildPokedex()
 	{
-//		pokedex.add(new Charizard("Crazy wing dude"));
-//		pokedex.add(new Charmander("The Fire Tail"));
-//		pokedex.add(new Eevee("The lame lady"));
+		pokedex.add(new Charizard("Crazy wing dude"));
+		pokedex.add(new Charmander("The Fire Tail"));
+		pokedex.add(new Eevee("The lame lady"));
 		pokedex.add(new Pikachu("Pika pika!"));
-//		pokedex.add(new Snorlax("zzzzzzz"));
+		pokedex.add(new Snorlax("zzzzzzz"));
+		pokedex.add(new Snorlax("laaaaammmmmeee"));
 	}
 	
 	public String[] buildPokedexText()
